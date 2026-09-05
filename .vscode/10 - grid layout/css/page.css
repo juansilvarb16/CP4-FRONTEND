@@ -1,3 +1,6 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
 .img {
     width: 100%;
     height: 100%;
@@ -6,29 +9,31 @@
 
 
 .banner {
-    background-color: #fdddd2;
-    padding: 100px 0;
+    background-color: #121212;
+    padding: 70px 0;
 }
 
-.banner-1 { grid-area: a; }
-.banner-2 { grid-area: b; }
-.banner-3 { grid-area: c; }
-.banner-4 { grid-area: d; }
-
 .banner__container {
-    max-width: 970px;
+    max-width: 1140px;
     margin: 0 auto;
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 350px 350px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 350px 260px;
     grid-template-areas:
-    "a a a"
-    "b c d";
+        "a a a a"
+        "b c d e";
+    padding: 0 15px;
 }
 
+.banner-1 { grid-area: a; }
+.banner-content { grid-area: b; }
+.banner-2 { grid-area: c; }
+.banner-3 { grid-area: d; }
+.banner-4 { grid-area: e; }
+
 .praia {
-    background-color: #181818;
+    background-color: #fff3ef ;
     padding: 100px 15px;
     display: grid;
     gap: 15px;
@@ -43,3 +48,26 @@
 .praia .img { border-radius: 7px; }
 
 
+.banner-content h2  {
+    color: #fff3ef;
+}
+.banner-content p {
+    color: #b4aaa3;
+}
+
+
+.banner__button {
+    background-color: #b4aaa3; 
+    color: #121212; 
+    border-radius: 20px; 
+    padding: 10px 24px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.banner__button:hover {
+    background-color: #968c85;
+}
